@@ -72,11 +72,16 @@ body {
     }
 }
 
-.glitch-header-2 {
-    position: absolute;
-    top: 2px;
-    text-shadow: 2px 2px #ff71ce, -2px -2px #01cdfe;
-    animation: glitch 2s infinite;
-    opacity: 0.7;
-}
+/* Media queries for responsive headers */
+@media (max-width: 768px) {
+    h2.text-5xl {
+        font-size: 1.75rem !important;
+        line-height: 2rem !important;
+        word-break: break-word;
+        hyphens: auto;
+    }
 
+    section {
+        padding-top: 7rem !important;
+    }
+}

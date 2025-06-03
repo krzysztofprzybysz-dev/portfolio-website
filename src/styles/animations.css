@@ -58,10 +58,22 @@
 /* Header Glitch Animations */
 .glitch-header-1 {
     animation: glitchHeader 3s infinite;
+    top: 0;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
 }
 
 .glitch-header-2 {
     animation: glitchHeader2 2.5s infinite;
+    top: 0;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
 }
 
 @keyframes glitchHeader {
@@ -70,7 +82,7 @@
         opacity: 0.3;
     }
     10% {
-        transform: translateX(-48%) skew(-5deg);
+        transform: translateX(-50%) skew(-5deg);
         opacity: 0.5;
     }
     20% {
@@ -78,7 +90,7 @@
         opacity: 0.3;
     }
     30% {
-        transform: translateX(-52%) skew(5deg);
+        transform: translateX(-50%) skew(5deg);
         opacity: 0.5;
     }
     40% {
@@ -86,7 +98,7 @@
         opacity: 0.3;
     }
     50% {
-        transform: translateX(-49%) scaleX(1.1);
+        transform: translateX(-50%) scaleX(1.1);
         opacity: 0.6;
     }
     60% {
@@ -94,7 +106,7 @@
         opacity: 0.3;
     }
     70% {
-        transform: translateX(-51%) skew(-3deg);
+        transform: translateX(-50%) skew(-3deg);
         opacity: 0.5;
     }
     80% {
@@ -102,7 +114,7 @@
         opacity: 0.3;
     }
     90% {
-        transform: translateX(-49%) scaleY(1.05);
+        transform: translateX(-50%) scaleY(1.05);
         opacity: 0.4;
     }
 }
@@ -113,11 +125,11 @@
         opacity: 0.3;
     }
     15% {
-        transform: translateX(-52%) translateY(-2px);
+        transform: translateX(-50%) translateY(-2px);
         opacity: 0.5;
     }
     30% {
-        transform: translateX(-48%) translateY(1px);
+        transform: translateX(-50%) translateY(1px);
         opacity: 0.4;
     }
     45% {
@@ -125,12 +137,21 @@
         opacity: 0.6;
     }
     60% {
-        transform: translateX(-51%) translateY(2px);
+        transform: translateX(-50%) translateY(2px);
         opacity: 0.3;
     }
     75% {
-        transform: translateX(-49%) translateY(-2px) skew(-2deg);
+        transform: translateX(-50%) translateY(-2px) skew(-2deg);
         opacity: 0.5;
+    }
+}
+
+/* Responsive styles for glitch effect */
+@media (max-width: 768px) {
+    .glitch-header-1,
+    .glitch-header-2 {
+        width: 100%;
+        text-align: center;
     }
 }
 
@@ -143,3 +164,4 @@
     from { width: 0; }
     to { width: var(--width); }
 }
+
