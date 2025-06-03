@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+.grid-background {
+    background-image:
+            linear-gradient(rgba(1, 205, 254, 0.3) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(1, 205, 254, 0.3) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+/* Vaporwave styling */
+@layer components {
+    .vaporwave-text {
+        font-family: 'Press Start 2P', cursive;
+        color: transparent;
+        background-clip: text;
+        background-image: linear-gradient(to right, #ff71ce, #b967ff, #01cdfe);
+        text-shadow: 0 0 5px rgba(255, 113, 206, 0.5), 0 0 10px rgba(1, 205, 254, 0.5);
+    }
+
+    .neon-border {
+        border: 1px solid #01cdfe;
+        box-shadow: 0 0 5px #01cdfe, 0 0 10px rgba(1, 205, 254, 0.8);
+    }
+
+    .neon-glow {
+        text-shadow: 0 0 5px currentColor, 0 0 10px currentColor;
+    }
+
+    .retro-card {
+        background-color: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(8px);
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        border: 1px solid rgba(185, 103, 255, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .retro-card:hover {
+        border-color: #01cdfe;
+        box-shadow: 0 0 15px rgba(1, 205, 254, 0.5);
+        transform: translateY(-5px);
+    }
+}
+
+.skill-bar {
+    animation: skillAnimation 1.5s ease-out forwards;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+@keyframes skillAnimation {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+.glitch-header-2 {
+    position: absolute;
+    top: 2px;
+    text-shadow: 2px 2px #ff71ce, -2px -2px #01cdfe;
+    animation: glitch 2s infinite;
+    opacity: 0.7;
+}
+

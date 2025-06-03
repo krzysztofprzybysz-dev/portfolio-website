@@ -1,0 +1,145 @@
+/* Glitch Animations */
+.glitch-1 {
+    animation: glitch 2s infinite;
+    clip-path: inset(0 0 0 0);
+}
+
+.glitch-2 {
+    animation: glitch2 2.5s infinite;
+    clip-path: inset(0 0 0 0);
+}
+
+@keyframes glitch {
+    0%, 100% {
+        transform: translate(0);
+        clip-path: inset(0 0 0 0);
+    }
+    20% {
+        transform: translate(-2px, 2px);
+        clip-path: inset(20% 0 30% 0);
+    }
+    40% {
+        transform: translate(-2px, -2px);
+        clip-path: inset(50% 0 20% 0);
+    }
+    60% {
+        transform: translate(2px, 2px);
+        clip-path: inset(10% 0 60% 0);
+    }
+    80% {
+        transform: translate(2px, -2px);
+        clip-path: inset(40% 0 10% 0);
+    }
+}
+
+@keyframes glitch2 {
+    0%, 100% {
+        transform: translate(0);
+        clip-path: inset(0 0 0 0);
+    }
+    20% {
+        transform: translate(2px, -2px);
+        clip-path: inset(60% 0 10% 0);
+    }
+    40% {
+        transform: translate(-2px, 2px);
+        clip-path: inset(20% 0 50% 0);
+    }
+    60% {
+        transform: translate(2px, 2px);
+        clip-path: inset(30% 0 40% 0);
+    }
+    80% {
+        transform: translate(-2px, -2px);
+        clip-path: inset(10% 0 70% 0);
+    }
+}
+
+/* Header Glitch Animations */
+.glitch-header-1 {
+    animation: glitchHeader 3s infinite;
+}
+
+.glitch-header-2 {
+    animation: glitchHeader2 2.5s infinite;
+}
+
+@keyframes glitchHeader {
+    0%, 100% {
+        transform: translateX(-50%);
+        opacity: 0.3;
+    }
+    10% {
+        transform: translateX(-48%) skew(-5deg);
+        opacity: 0.5;
+    }
+    20% {
+        transform: translateX(-50%);
+        opacity: 0.3;
+    }
+    30% {
+        transform: translateX(-52%) skew(5deg);
+        opacity: 0.5;
+    }
+    40% {
+        transform: translateX(-50%);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translateX(-49%) scaleX(1.1);
+        opacity: 0.6;
+    }
+    60% {
+        transform: translateX(-50%);
+        opacity: 0.3;
+    }
+    70% {
+        transform: translateX(-51%) skew(-3deg);
+        opacity: 0.5;
+    }
+    80% {
+        transform: translateX(-50%);
+        opacity: 0.3;
+    }
+    90% {
+        transform: translateX(-49%) scaleY(1.05);
+        opacity: 0.4;
+    }
+}
+
+@keyframes glitchHeader2 {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+        opacity: 0.3;
+    }
+    15% {
+        transform: translateX(-52%) translateY(-2px);
+        opacity: 0.5;
+    }
+    30% {
+        transform: translateX(-48%) translateY(1px);
+        opacity: 0.4;
+    }
+    45% {
+        transform: translateX(-50%) translateY(-1px) skew(2deg);
+        opacity: 0.6;
+    }
+    60% {
+        transform: translateX(-51%) translateY(2px);
+        opacity: 0.3;
+    }
+    75% {
+        transform: translateX(-49%) translateY(-2px) skew(-2deg);
+        opacity: 0.5;
+    }
+}
+
+/* Skill Bar Animation */
+.skill-bar {
+    animation: slideIn 1s ease-out both;
+}
+
+@keyframes slideIn {
+    from { width: 0; }
+    to { width: var(--width); }
+}
