@@ -12,11 +12,13 @@ import Footer from './components/Footer';
 const App = () => {
     const [activeSection, setActiveSection] = useState('home');
     const sectionRefs = useRef({});
+    // Offset dla nawigacji, aby tytuły sekcji nie były zasłonięte
+    const navOffset = 80; // Przybliżona wysokość navbara plus dodatkowy margines
 
     useEffect(() => {
         const handleScroll = () => {
             // Obsługa aktywnej sekcji dla nawigacji
-            const scrollPosition = window.scrollY + 100;
+            const scrollPosition = window.scrollY + navOffset + 20; // Dodano offset dla dokładniejszej detekcji aktywnej sekcji
 
             Object.entries(sectionRefs.current).forEach(([section, ref]) => {
                 if (ref && ref.offsetTop <= scrollPosition && ref.offsetTop + ref.offsetHeight > scrollPosition) {
@@ -68,7 +70,16 @@ const App = () => {
     }, []);
 
     const scrollToSection = (sectionId) => {
-        sectionRefs.current[sectionId]?.scrollIntoView({ behavior: 'smooth' });
+        if (sectionRefs.current[sectionId]) {
+            const section = sectionRefs.current[sectionId];
+            const sectionTop = section.getBoundingClientRect().top + window.pageYOffset;
+
+            // Przewijamy do sekcji z uwzględnieniem offsetu nawigacji
+            window.scrollTo({
+                top: sectionTop - navOffset,
+                behavior: 'smooth'
+            });
+        }
     };
 
     return (

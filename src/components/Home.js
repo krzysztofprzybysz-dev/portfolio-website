@@ -3,6 +3,19 @@ import { ChevronDown, Mail, Github, Linkedin } from 'lucide-react';
 
 const Home = forwardRef((props, ref) => {
     const glitchText = 'Krzysztof Przybysz';
+    const navOffset = 80; // Taki sam offset jak w App.js
+
+    const handleScrollDown = () => {
+        // Znajdź następną sekcję (prawdopodobnie About) i przewiń do niej
+        const aboutSection = document.getElementById('about');
+        if (aboutSection) {
+            const sectionTop = aboutSection.getBoundingClientRect().top + window.pageYOffset;
+            window.scrollTo({
+                top: sectionTop - navOffset,
+                behavior: 'smooth'
+            });
+        }
+    };
 
     return (
         <section ref={ref} id="home" className="min-h-screen flex items-center justify-center relative vaporwave-section">
@@ -45,7 +58,15 @@ const Home = forwardRef((props, ref) => {
                         <Mail className="w-6 h-6" />
                     </a>
                 </div>
-                <ChevronDown className="w-8 h-8 mx-auto animate-bounce text-cyan-400 scroll-animate animate-up" />
+                <div className="flex justify-center w-full">
+                    <button
+                        onClick={handleScrollDown}
+                        className="cursor-pointer p-3 bg-gradient-to-r from-pink-500/30 to-cyan-500/30 rounded-full hover:from-pink-500/50 hover:to-cyan-500/50 transition-all duration-500 hover:scale-110 group flex items-center justify-center scroll-animate animate-up mt-4"
+                        aria-label="Przewiń w dół"
+                    >
+                        <ChevronDown className="w-8 h-8 text-cyan-400 group-hover:text-pink-300 transition-colors duration-300 animated-arrow" />
+                    </button>
+                </div>
             </div>
 
             {/* Animated Background Elements */}
