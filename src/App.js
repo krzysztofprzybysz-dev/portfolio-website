@@ -81,12 +81,12 @@ const App = () => {
             <Navigation activeSection={activeSection} scrollToSection={scrollToSection} />
 
             <Home ref={el => sectionRefs.current['home'] = el} />
-            <About ref={el => sectionRefs.current['o-mnie'] = el} />
-            <Skills ref={el => sectionRefs.current['umiejętności'] = el} />
-            <Projects ref={el => sectionRefs.current['projekty'] = el} />
-            <Experience ref={el => sectionRefs.current['doświadczenie'] = el} />
-            <Education ref={el => sectionRefs.current['edukacja'] = el} />
-            <Contact ref={el => sectionRefs.current['kontakt'] = el} />
+            <About ref={el => sectionRefs.current['about'] = el} />
+            <Skills ref={el => sectionRefs.current['skills'] = el} />
+            <Projects ref={el => sectionRefs.current['projects'] = el} />
+            <Experience ref={el => sectionRefs.current['experience'] = el} />
+            <Education ref={el => sectionRefs.current['education'] = el} />
+            <Contact ref={el => sectionRefs.current['contact'] = el} />
 
             <Footer />
         </div>

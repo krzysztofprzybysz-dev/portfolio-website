@@ -4,14 +4,14 @@ import * as LucideIcons from 'lucide-react';
 
 const Skills = forwardRef((props, ref) => {
     return (
-        <section ref={ref} id="umiejętności" className="py-12 px-6 vaporwave-section">
+        <section ref={ref} id="skills" className="py-12 px-6 vaporwave-section">
             <div className="container mx-auto max-w-4xl">
                 <h2 className="text-5xl font-bold text-center mb-12 relative inline-block w-full scroll-animate animate-up">
           <span className="relative z-10 bg-gradient-to-r from-cyan-400 to-pink-400 text-transparent bg-clip-text">
-            [ Umiejętności ]
+            [ Skills ]
           </span>
                     <span className="absolute left-1/2 transform -translate-x-1/2 text-cyan-500/30 glitch-header-2">
-            [ Umiejętności ]
+            [ Skills ]
           </span>
                 </h2>
                 <div className="space-y-6 mb-12">

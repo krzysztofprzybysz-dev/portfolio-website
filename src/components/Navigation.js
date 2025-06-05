@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const Navigation = ({ activeSection, scrollToSection }) => {
-    const sections = ['home', 'o-mnie', 'umiejętności', 'projekty', 'doświadczenie', 'edukacja', 'kontakt'];
+    const sections = ['home', 'about', 'skills', 'projects', 'experience', 'education', 'contact'];
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
@@ -63,4 +63,3 @@ const Navigation = ({ activeSection, scrollToSection }) => {
 };
 
 export default Navigation;
-

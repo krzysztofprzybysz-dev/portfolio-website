@@ -19,7 +19,7 @@ const Home = forwardRef((props, ref) => {
           </span>
                 </h1>
                 <p className="text-2xl md:text-3xl text-cyan-300 mb-8 font-mono scroll-animate animate-right">
-                    Front-end Developer | Designer | Creator
+                    Fullstack Developer
                 </p>
                 <div className="flex justify-center space-x-4 mb-12 scroll-animate animate-up">
                     <a

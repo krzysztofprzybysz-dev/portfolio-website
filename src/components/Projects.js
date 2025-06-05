@@ -3,14 +3,14 @@ import { projects } from '../data/portfolioData';
 
 const Projects = forwardRef((props, ref) => {
     return (
-        <section ref={ref} id="projekty" className="py-12 px-6 vaporwave-section">
+        <section ref={ref} id="projects" className="py-12 px-6 vaporwave-section">
             <div className="container mx-auto max-w-6xl">
                 <h2 className="text-5xl font-bold text-center mb-12 relative inline-block w-full scroll-animate animate-up">
           <span className="relative z-10 bg-gradient-to-r from-purple-400 to-cyan-400 text-transparent bg-clip-text">
-            [ Projekty ]
+            [ Projects ]
           </span>
                     <span className="absolute left-1/2 transform -translate-x-1/2 text-purple-500/30 glitch-header-1">
-            [ Projekty ]
+            [ Projects ]
           </span>
                 </h2>
                 <div className="grid md:grid-cols-3 gap-6 mb-12">
@@ -44,7 +44,7 @@ const Projects = forwardRef((props, ref) => {
                                     rel="noopener noreferrer"
                                     className="flex-1 text-center py-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
                                 >
-                                    Kod
+                                    Code
                                 </a>
                             </div>
                         </div>
