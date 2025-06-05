@@ -15,6 +15,7 @@ const App = () => {
 
     useEffect(() => {
         const handleScroll = () => {
+            // Obsługa aktywnej sekcji dla nawigacji
             const scrollPosition = window.scrollY + 100;
 
             Object.entries(sectionRefs.current).forEach(([section, ref]) => {
@@ -22,9 +23,47 @@ const App = () => {
                     setActiveSection(section);
                 }
             });
+
+            // Obsługa animacji przewijania
+            const isElementInViewport = (el) => {
+                if (!el) return false;
+                const rect = el.getBoundingClientRect();
+                const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+                const topVisible = rect.top <= windowHeight * 0.75;
+                const bottomVisible = rect.bottom >= 0;
+                return topVisible && bottomVisible;
+            };
+
+            // Animacje dla elementów z klasą .scroll-animate
+            const animatedElements = document.querySelectorAll('.scroll-animate');
+            animatedElements.forEach((el) => {
+                if (isElementInViewport(el) && !el.classList.contains('animated')) {
+                    if (el.classList.contains('animate-up')) {
+                        el.classList.add('fade-in-up');
+                    } else if (el.classList.contains('animate-left')) {
+                        el.classList.add('fade-in-left');
+                    } else if (el.classList.contains('animate-right')) {
+                        el.classList.add('fade-in-right');
+                    }
+                    el.classList.add('animated');
+                }
+            });
+
+            // Aktywacja efektu neonowego dla sekcji w viewport
+            const sections = document.querySelectorAll('.vaporwave-section');
+            sections.forEach((section) => {
+                if (isElementInViewport(section)) {
+                    section.classList.add('active-section');
+                } else {
+                    section.classList.remove('active-section');
+                }
+            });
         };
 
         window.addEventListener('scroll', handleScroll);
+        // Wywołanie na początku, aby sprawdzić elementy już widoczne
+        handleScroll();
+
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 

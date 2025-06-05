@@ -2,9 +2,9 @@ import React, { forwardRef } from 'react';
 
 const Education = forwardRef((props, ref) => {
     return (
-        <section ref={ref} id="edukacja" className="min-h-screen py-20 px-6">
+        <section ref={ref} id="edukacja" className="min-h-screen py-20 px-6 vaporwave-section">
             <div className="container mx-auto max-w-4xl">
-                <h2 className="text-5xl font-bold text-center mb-16 relative inline-block w-full">
+                <h2 className="text-5xl font-bold text-center mb-16 relative inline-block w-full scroll-animate animate-up">
           <span className="relative z-10 bg-gradient-to-r from-cyan-400 to-purple-400 text-transparent bg-clip-text">
             [ Edukacja ]
           </span>
@@ -12,7 +12,7 @@ const Education = forwardRef((props, ref) => {
             [ Edukacja ]
           </span>
                 </h2>
-                <div className="bg-black/30 backdrop-blur-md rounded-xl p-8 border border-purple-500/30">
+                <div className="bg-black/30 backdrop-blur-md rounded-xl p-8 border border-purple-500/30 scroll-animate animate-left">
                     <h3 className="text-2xl font-bold text-pink-300 mb-2">Informatyka</h3>
                     <p className="text-cyan-300 mb-4">Politechnika Warszawska</p>
                     <p className="text-purple-300">2016 - 2020</p>
