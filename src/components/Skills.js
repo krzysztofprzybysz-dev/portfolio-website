@@ -4,9 +4,9 @@ import * as LucideIcons from 'lucide-react';
 
 const Skills = forwardRef((props, ref) => {
     return (
-        <section ref={ref} id="umiejętności" className="min-h-screen py-20 px-6">
+        <section ref={ref} id="umiejętności" className="min-h-screen py-20 px-6 vaporwave-section">
             <div className="container mx-auto max-w-4xl">
-                <h2 className="text-5xl font-bold text-center mb-16 relative inline-block w-full">
+                <h2 className="text-5xl font-bold text-center mb-16 relative inline-block w-full scroll-animate animate-up">
           <span className="relative z-10 bg-gradient-to-r from-cyan-400 to-pink-400 text-transparent bg-clip-text">
             [ Umiejętności ]
           </span>
@@ -18,7 +18,11 @@ const Skills = forwardRef((props, ref) => {
                     {skills.map((skill, index) => {
                         const Icon = LucideIcons[skill.icon];
                         return (
-                            <div key={skill.name} className="bg-black/30 backdrop-blur-md rounded-lg p-6 border border-purple-500/30">
+                            <div
+                                key={skill.name}
+                                className="bg-black/30 backdrop-blur-md rounded-lg p-6 border border-purple-500/30 scroll-animate animate-left"
+                                style={{ animationDelay: `${index * 0.1}s` }}
+                            >
                                 <div className="flex justify-between mb-2 items-center">
                                     <div className="flex items-center gap-2">
                                         {Icon && <Icon className="text-cyan-300 w-5 h-5" />}
@@ -47,4 +51,3 @@ const Skills = forwardRef((props, ref) => {
 Skills.displayName = 'Skills';
 
 export default Skills;
-

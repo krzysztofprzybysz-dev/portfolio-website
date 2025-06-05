@@ -5,9 +5,9 @@ const Home = forwardRef((props, ref) => {
     const glitchText = 'Krzysztof Przybysz';
 
     return (
-        <section ref={ref} id="home" className="min-h-screen flex items-center justify-center relative">
+        <section ref={ref} id="home" className="min-h-screen flex items-center justify-center relative vaporwave-section">
             <div className="text-center z-10">
-                <h1 className="text-6xl md:text-8xl font-bold mb-6 relative inline-block">
+                <h1 className="text-6xl md:text-8xl font-bold mb-6 relative inline-block scroll-animate animate-up">
           <span className="relative z-10 bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 text-transparent bg-clip-text">
             {glitchText}
           </span>
@@ -18,10 +18,10 @@ const Home = forwardRef((props, ref) => {
             {glitchText}
           </span>
                 </h1>
-                <p className="text-2xl md:text-3xl text-cyan-300 mb-8 font-mono">
+                <p className="text-2xl md:text-3xl text-cyan-300 mb-8 font-mono scroll-animate animate-right">
                     Front-end Developer | Designer | Creator
                 </p>
-                <div className="flex justify-center space-x-4 mb-12">
+                <div className="flex justify-center space-x-4 mb-12 scroll-animate animate-up">
                     <a
                         href="https://github.com"
                         target="_blank"
@@ -45,7 +45,7 @@ const Home = forwardRef((props, ref) => {
                         <Mail className="w-6 h-6" />
                     </a>
                 </div>
-                <ChevronDown className="w-8 h-8 mx-auto animate-bounce text-cyan-400" />
+                <ChevronDown className="w-8 h-8 mx-auto animate-bounce text-cyan-400 scroll-animate animate-up" />
             </div>
 
             {/* Animated Background Elements */}

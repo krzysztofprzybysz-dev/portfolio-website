@@ -3,9 +3,9 @@ import { projects } from '../data/portfolioData';
 
 const Projects = forwardRef((props, ref) => {
     return (
-        <section ref={ref} id="projekty" className="min-h-screen py-20 px-6">
+        <section ref={ref} id="projekty" className="min-h-screen py-20 px-6 vaporwave-section">
             <div className="container mx-auto max-w-6xl">
-                <h2 className="text-5xl font-bold text-center mb-16 relative inline-block w-full">
+                <h2 className="text-5xl font-bold text-center mb-16 relative inline-block w-full scroll-animate animate-up">
           <span className="relative z-10 bg-gradient-to-r from-purple-400 to-cyan-400 text-transparent bg-clip-text">
             [ Projekty ]
           </span>
@@ -17,7 +17,8 @@ const Projects = forwardRef((props, ref) => {
                     {projects.map((project, index) => (
                         <div
                             key={index}
-                            className="bg-black/30 backdrop-blur-md rounded-xl p-6 border border-pink-500/30 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/30"
+                            className="bg-black/30 backdrop-blur-md rounded-xl p-6 border border-pink-500/30 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/30 scroll-animate animate-up"
+                            style={{ animationDelay: `${index * 0.1}s` }}
                         >
                             <h3 className="text-2xl font-bold mb-3 text-cyan-300">{project.title}</h3>
                             <p className="text-gray-300 mb-4">{project.description}</p>
