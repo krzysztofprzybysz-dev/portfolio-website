@@ -3,9 +3,9 @@ import { projects } from '../data/portfolioData';
 
 const Projects = forwardRef((props, ref) => {
     return (
-        <section ref={ref} id="projekty" className="min-h-screen py-20 px-6 vaporwave-section">
+        <section ref={ref} id="projekty" className="py-12 px-6 vaporwave-section">
             <div className="container mx-auto max-w-6xl">
-                <h2 className="text-5xl font-bold text-center mb-16 relative inline-block w-full scroll-animate animate-up">
+                <h2 className="text-5xl font-bold text-center mb-12 relative inline-block w-full scroll-animate animate-up">
           <span className="relative z-10 bg-gradient-to-r from-purple-400 to-cyan-400 text-transparent bg-clip-text">
             [ Projekty ]
           </span>
@@ -13,7 +13,7 @@ const Projects = forwardRef((props, ref) => {
             [ Projekty ]
           </span>
                 </h2>
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-3 gap-6 mb-12">
                     {projects.map((project, index) => (
                         <div
                             key={index}

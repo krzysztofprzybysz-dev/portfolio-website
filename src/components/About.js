@@ -3,9 +3,9 @@ import { Terminal, Palette, Code, Globe } from 'lucide-react';
 
 const About = forwardRef((props, ref) => {
     return (
-        <section ref={ref} id="o-mnie" className="min-h-screen py-20 px-6 vaporwave-section">
+        <section ref={ref} id="o-mnie" className="py-12 px-6 vaporwave-section">
             <div className="container mx-auto max-w-4xl">
-                <h2 className="text-5xl font-bold text-center mb-16 relative inline-block w-full scroll-animate animate-up">
+                <h2 className="text-5xl font-bold text-center mb-12 relative inline-block w-full scroll-animate animate-up">
           <span className="relative z-10 bg-gradient-to-r from-pink-400 to-cyan-400 text-transparent bg-clip-text">
             [ O Mnie ]
           </span>
@@ -13,7 +13,7 @@ const About = forwardRef((props, ref) => {
             [ O Mnie ]
           </span>
                 </h2>
-                <div className="bg-black/30 backdrop-blur-md rounded-2xl p-8 border border-cyan-500/30 shadow-2xl shadow-pink-500/20 scroll-animate animate-up">
+                <div className="bg-black/30 backdrop-blur-md rounded-2xl p-8 border border-cyan-500/30 shadow-2xl shadow-pink-500/20 scroll-animate animate-up mb-12">
                     <p className="text-lg leading-relaxed mb-6 text-cyan-100 scroll-animate animate-left">
                         Cześć! Jestem pasjonatem technologii front-end z miłością do tworzenia immersyjnych,
                         estetycznych doświadczeń cyfrowych. Specjalizuję się w łączeniu nostalgii retro z

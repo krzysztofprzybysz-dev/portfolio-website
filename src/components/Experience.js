@@ -2,9 +2,9 @@ import React, { forwardRef } from 'react';
 
 const Experience = forwardRef((props, ref) => {
     return (
-        <section ref={ref} id="doświadczenie" className="min-h-screen py-20 px-6 vaporwave-section">
+        <section ref={ref} id="doświadczenie" className="py-12 px-6 vaporwave-section">
             <div className="container mx-auto max-w-4xl">
-                <h2 className="text-5xl font-bold text-center mb-16 relative inline-block w-full scroll-animate animate-up">
+                <h2 className="text-5xl font-bold text-center mb-12 relative inline-block w-full scroll-animate animate-up">
           <span className="relative z-10 bg-gradient-to-r from-pink-400 to-purple-400 text-transparent bg-clip-text">
             [ Doświadczenie ]
           </span>
@@ -12,7 +12,7 @@ const Experience = forwardRef((props, ref) => {
             [ Doświadczenie ]
           </span>
                 </h2>
-                <div className="space-y-8">
+                <div className="space-y-8 mb-12">
                     <div className="bg-black/30 backdrop-blur-md rounded-xl p-8 border-l-4 border-pink-500 hover:border-cyan-500 transition-all duration-300 scroll-animate animate-left">
                         <div className="flex justify-between items-start mb-4">
                             <div>

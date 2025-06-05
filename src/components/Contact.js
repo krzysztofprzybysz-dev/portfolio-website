@@ -3,9 +3,9 @@ import { Mail, Github, Linkedin } from 'lucide-react';
 
 const Contact = forwardRef((props, ref) => {
     return (
-        <section ref={ref} id="kontakt" className="min-h-screen py-20 px-6 vaporwave-section">
+        <section ref={ref} id="kontakt" className="py-12 px-6 vaporwave-section">
             <div className="container mx-auto max-w-4xl">
-                <h2 className="text-5xl font-bold text-center mb-16 relative inline-block w-full scroll-animate animate-up">
+                <h2 className="text-5xl font-bold text-center mb-12 relative inline-block w-full scroll-animate animate-up">
           <span className="relative z-10 bg-gradient-to-r from-purple-400 to-pink-400 text-transparent bg-clip-text">
             [ Kontakt ]
           </span>
@@ -13,7 +13,7 @@ const Contact = forwardRef((props, ref) => {
             [ Kontakt ]
           </span>
                 </h2>
-                <div className="bg-black/30 backdrop-blur-md rounded-xl p-8 border border-cyan-500/30 text-center">
+                <div className="bg-black/30 backdrop-blur-md rounded-xl p-8 border border-cyan-500/30 text-center mb-12">
                     <p className="text-xl mb-8 text-cyan-300 scroll-animate animate-right">Chętnie nawiążę współpracę!</p>
                     <div className="space-y-4">
                         <a
