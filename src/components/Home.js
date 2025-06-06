@@ -1,9 +1,22 @@
 import React, { forwardRef } from 'react';
 import { ChevronDown, Mail, Github, Linkedin } from 'lucide-react';
+import TypewriterEffect from './TypewriterEffect';
 
 const Home = forwardRef((props, ref) => {
     const glitchText = 'Krzysztof Przybysz';
     const navOffset = 80; // Taki sam offset jak w App.js
+
+    // Lista ról do wyświetlenia w animacji TypewriterEffect
+    const rolesList = [
+        "Software Developer",
+        "Product Owner",
+        "Backend Developer",
+        "Full-stack Developer",
+        "Problem Solver",
+        "Solution Builder",
+        "Team Collaborator",
+        "Technology Enthusiast"
+    ];
 
     const handleScrollDown = () => {
         // Znajdź następną sekcję (prawdopodobnie About) i przewiń do niej
@@ -31,9 +44,12 @@ const Home = forwardRef((props, ref) => {
             {glitchText}
           </span>
                 </h1>
-                <p className="text-2xl md:text-3xl text-cyan-300 mb-8 font-mono scroll-animate animate-right">
-                    Fullstack Developer
+
+                {/* Element z powitaniem i efektem TypewriterEffect */}
+                <p className="text-xl md:text-2xl text-white mb-12 font-mono scroll-animate animate-left">
+                    Hi there, I'm <TypewriterEffect phrases={rolesList} typingSpeed={80} deletingSpeed={40} pauseTime={1500} />
                 </p>
+
                 <div className="flex justify-center space-x-4 mb-12 scroll-animate animate-up">
                     <a
                         href="https://github.com"

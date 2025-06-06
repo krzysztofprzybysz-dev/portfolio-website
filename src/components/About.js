@@ -1,21 +1,7 @@
 import React, { forwardRef } from 'react';
 import { Coffee, Network, Webhook, Puzzle, Lightbulb, Users, Rocket, BookOpen } from 'lucide-react';
-import TypewriterEffect from './TypewriterEffect';
 
 const About = forwardRef((props, ref) => {
-    const rolesList = [
-        "Software Developer",
-        "Product Owner",
-        "Backend Developer",
-        "Full-stack Developer",
-        "Problem Solver",
-        "Solution Builder",
-        "Team Collaborator",
-        "Technology Enthusiast",
-        "Code Craftsman",
-        "System Architect"
-    ];
-
     return (
         <section ref={ref} id="about" className="py-12 px-6 vaporwave-section">
             <div className="container mx-auto max-w-4xl">
@@ -29,13 +15,8 @@ const About = forwardRef((props, ref) => {
                 </h2>
 
                 <div className="bg-black/30 backdrop-blur-md rounded-2xl p-8 border border-cyan-500/30 shadow-2xl shadow-pink-500/20 scroll-animate animate-up mb-12">
-                    {/* Napis HI THERE! przeniesiony z powrotem do środka boxu */}
-                    <div className="mb-6 text-center">
-                        <h3 className="text-3xl sm:text-4xl font-bold text-cyan-400 inline-block px-8 py-2 border-b-2 border-t-2 border-cyan-500">HI THERE!</h3>
-                    </div>
-
-                    <p className="text-xl leading-relaxed mb-6 text-cyan-100 scroll-animate animate-left bg-gradient-to-r from-pink-500/10 to-cyan-500/10 p-4 rounded-lg border border-cyan-400/20">
-                        I'm a versatile <TypewriterEffect phrases={rolesList} typingSpeed={80} deletingSpeed={40} pauseTime={1500} /> with solid experience who believes that the best code is the one that solves real problems for real people.
+                    <p className="text-xl leading-relaxed mb-6 text-cyan-100 scroll-animate animate-left bg-gradient-to-r from-pink-500/10 to-cyan-500/10 p-4 rounded-lg border border-cyan-400/20 text-center">
+                        I'm a versatile <span className="text-indigo-300 font-semibold">Software Developer</span> with solid experience who believes that the best code is the one that solves real problems for real people.
                     </p>
 
                     <div className="h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent my-6"></div>
