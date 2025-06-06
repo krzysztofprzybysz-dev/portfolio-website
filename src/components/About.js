@@ -1,7 +1,21 @@
 import React, { forwardRef } from 'react';
 import { Coffee, Network, Webhook, Puzzle, Lightbulb, Users, Rocket, BookOpen } from 'lucide-react';
+import TypewriterEffect from './TypewriterEffect';
 
 const About = forwardRef((props, ref) => {
+    const rolesList = [
+        "Software Developer",
+        "Product Owner",
+        "Backend Developer",
+        "Full-stack Developer",
+        "Problem Solver",
+        "Solution Builder",
+        "Team Collaborator",
+        "Technology Enthusiast",
+        "Code Craftsman",
+        "System Architect"
+    ];
+
     return (
         <section ref={ref} id="about" className="py-12 px-6 vaporwave-section">
             <div className="container mx-auto max-w-4xl">
@@ -13,21 +27,39 @@ const About = forwardRef((props, ref) => {
             [ About Me ]
           </span>
                 </h2>
+
                 <div className="bg-black/30 backdrop-blur-md rounded-2xl p-8 border border-cyan-500/30 shadow-2xl shadow-pink-500/20 scroll-animate animate-up mb-12">
-                    <p className="text-lg leading-relaxed mb-4 text-cyan-100 scroll-animate animate-left">
-                        I am a motivated and <strong className="text-indigo-300">versatile Software Developer</strong> with solid experience. My work includes hands-on <strong className="text-indigo-300">backend and frontend development</strong>, <strong className="text-indigo-300">system integration</strong>, and <strong className="text-indigo-300">project ownership</strong>. I bring a strong background in <strong className="text-indigo-300">requirements analysis</strong> and <strong className="text-indigo-300">team leadership</strong>, consistently <strong className="text-indigo-300">delivering high-quality software solutions</strong>. I'm passionate about technology, <strong className="text-indigo-300">continuous learning</strong>, and building effective, <strong className="text-indigo-300">scalable systems</strong>.
+                    {/* Napis HI THERE! przeniesiony z powrotem do środka boxu */}
+                    <div className="mb-6 text-center">
+                        <h3 className="text-3xl sm:text-4xl font-bold text-cyan-400 inline-block px-8 py-2 border-b-2 border-t-2 border-cyan-500">HI THERE!</h3>
+                    </div>
+
+                    <p className="text-xl leading-relaxed mb-6 text-cyan-100 scroll-animate animate-left bg-gradient-to-r from-pink-500/10 to-cyan-500/10 p-4 rounded-lg border border-cyan-400/20">
+                        I'm a versatile <TypewriterEffect phrases={rolesList} typingSpeed={80} deletingSpeed={40} pauseTime={1500} /> with solid experience who believes that the best code is the one that solves real problems for real people.
                     </p>
 
                     <div className="h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent my-6"></div>
 
-                    <p className="text-lg leading-relaxed mb-4 text-cyan-100 scroll-animate animate-right">
-                        My journey as a <strong className="text-indigo-300">Product Owner/Developer</strong> offers a <strong className="text-indigo-300">unique perspective</strong>, effectively <strong className="text-indigo-300">bridging business vision and technical execution</strong>. This role has honed my ability to deeply <strong className="text-indigo-300">understand user needs</strong> and translate them into <strong className="text-indigo-300">robust, efficient software</strong>. I'm eager to apply this skill more directly in a <strong className="text-indigo-300">dedicated development role</strong>. I am now seeking a focused <strong className="text-indigo-300">Backend Java Developer or Fullstack Developer position</strong>. My goal is to leverage my comprehensive understanding of the <strong className="text-indigo-300">software lifecycle</strong> and my <strong className="text-indigo-300">passion for coding</strong> to build <strong className="text-indigo-300">innovative and impactful technological solutions</strong>.
+                    <p className="text-lg leading-relaxed mb-6 text-cyan-100 scroll-animate animate-right">
+                        My programming journey started with curiosity, but quickly evolved into a professional career path. Over the years, I've developed skills in <strong className="text-indigo-300">backend and frontend development</strong>, <strong className="text-indigo-300">system integration</strong>, and <strong className="text-indigo-300">project ownership</strong>. I'm fascinated by the entire software lifecycle - from <strong className="text-indigo-300">requirements analysis</strong> and architecture design to <strong className="text-indigo-300">delivering high-quality solutions</strong>.
                     </p>
 
                     <div className="h-px bg-gradient-to-r from-transparent via-pink-500/30 to-transparent my-6"></div>
 
-                    <p className="text-lg leading-relaxed mb-4 text-cyan-100 scroll-animate animate-left">
-                        Looking forward, I want to grow my skills in <strong className="text-indigo-300">solid software architecture</strong> and <strong className="text-indigo-300">current industry best practices</strong>. I'm also very interested in <strong className="text-indigo-300">cloud technologies</strong> and using <strong className="text-indigo-300">automation</strong> more. This will help create systems that are even more <strong className="text-indigo-300">reliable, scalable, and efficient</strong>. I believe that always learning in these key areas will let me make a real impact on <strong className="text-indigo-300">innovative projects</strong> and help drive technological progress.
+                    <p className="text-lg leading-relaxed mb-6 text-cyan-100 scroll-animate animate-left">
+                        As someone who combines technical skills with <strong className="text-indigo-300">strong team collaboration</strong>, I love those moments when all the puzzle pieces suddenly fit together - when technical implementation perfectly aligns with business goals and user needs. My experience as a <strong className="text-indigo-300">Product Owner/Developer</strong> gives me a unique perspective that bridges business vision and technical execution, allowing me to build solutions that truly matter.
+                    </p>
+
+                    <div className="h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent my-6"></div>
+
+                    <p className="text-lg leading-relaxed mb-6 text-cyan-100 scroll-animate animate-right">
+                        I'm a strong advocate for <strong className="text-indigo-300">continuous learning</strong> - technology evolves so rapidly that every day is an opportunity to learn something new. Currently, I'm deepening my knowledge in software architecture and cloud technologies, because I believe the future belongs to <strong className="text-indigo-300">scalable, efficient systems</strong>.
+                    </p>
+
+                    <div className="h-px bg-gradient-to-r from-transparent via-pink-500/30 to-transparent my-6"></div>
+
+                    <p className="text-lg leading-relaxed text-cyan-100 scroll-animate animate-left text-center">
+                        I'm looking for opportunities where I can leverage my versatility and passion for building innovative technological solutions that make a real impact.
                     </p>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8">
                         <div className="bg-gradient-to-br from-pink-500/20 to-purple-500/20 p-4 rounded-lg text-center scroll-animate animate-up flex flex-col items-center justify-center h-32">
