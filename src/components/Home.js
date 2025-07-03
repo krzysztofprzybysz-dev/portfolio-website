@@ -31,7 +31,7 @@ const Home = forwardRef((props, ref) => {
     };
 
     return (
-        <section ref={ref} id="home" className="min-h-screen flex md:items-center items-start pt-[30vh] md:pt-0 justify-center relative vaporwave-section">
+        <section ref={ref} id="home" className="min-h-screen flex md:items-center items-start pt-[20vh] md:pt-0 justify-center relative vaporwave-section">
             <div className="text-center z-10">
                 <h1 className="text-6xl md:text-8xl font-bold mb-6 relative inline-block scroll-animate animate-up">
           <span className="relative z-10 bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 text-transparent bg-clip-text">
