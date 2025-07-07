@@ -251,12 +251,3 @@ While this is a personal portfolio, suggestions and feedback are welcome! Feel f
 ## 📄 License
 
 This project is open source and available under the MIT License. Feel free to use it as inspiration for your own portfolio!
-
-## 👤 Author
-
-**Krzysztof Przybysz**  
-Software Developer | Product Owner | Technology Enthusiast
-
----
-
-<p align="center">Made with 💜 and lots of ☕</p>
